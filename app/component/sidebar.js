@@ -19,9 +19,9 @@ export default function Sidebar({
       {selectedNode ? (
         //settings panel
         <div>
-          <h3 className="text-xl mb-2 text-blue-900">Update Node</h3>
+          <h3 className="text-xl mb-2 text-blue-900">Päivitä tomintoa</h3>
           <label className="block mb-2 text-sm font-medium text-blue-900">
-            Node Name:
+            Viesti
           </label>
           <input
             type="text"
@@ -39,13 +39,27 @@ export default function Sidebar({
       ) : (
         //node panel
         <>
-          <h3 className="text-xl mb-4 text-blue-900">Nodes Panel</h3>
+          <h3 className="text-xl mb-4 text-blue-900">Toiminnot</h3>
           <div
             className="bg-white p-3 border-2 border-blue-500 rounded cursor-move flex justify-center items-center text-blue-500 hover:bg-blue-500 hover:text-white transition-colors duration-200"
             onDragStart={(event) => onDragStart(event, "textnode")}
             draggable
           >
-            Message Node
+            Viesti
+          </div>
+          <div
+            className="bg-white p-3 mt-3 border-2 border-blue-500 rounded cursor-move flex justify-center items-center text-blue-500 hover:bg-blue-500 hover:text-white transition-colors duration-200"
+            onDragStart={(event) => onDragStart(event, "optionnode")}
+            draggable
+          >
+            Valinta
+          </div>
+          <div
+            className="bg-white p-3 mt-3 border-2 border-blue-500 rounded cursor-move flex justify-center items-center text-blue-500 hover:bg-blue-500 hover:text-white transition-colors duration-200"
+            onDragStart={(event) => onDragStart(event, "formnode")}
+            draggable
+          >
+            Lomake
           </div>
         </>
       )}

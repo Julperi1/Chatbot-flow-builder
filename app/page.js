@@ -24,6 +24,8 @@ import "reactflow/dist/base.css";
 import "../tailwind.config.js";
 import Sidebar from "./component/sidebar";
 import TextNode from "./component/TextNode";
+import OptionNode from "./component/OptionNode";
+import FormNode from "./component/FormNode";
 
 // Key for local storage
 const flowKey = "flow-key";
@@ -48,6 +50,8 @@ const App = () => {
   const nodeTypes = useMemo(
     () => ({
       textnode: TextNode,
+      optionnode: OptionNode,
+      formnode: FormNode,
     }),
     []
   );
